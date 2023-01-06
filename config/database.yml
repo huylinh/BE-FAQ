@@ -8,8 +8,11 @@ default: &default
   adapter: mysql2
   encoding: utf8
   username: root
-  host: 127.0.0.1
-  port: 3306
+  password: rUrE4uCD1gmu46VBga2G
+  host: containers-us-west-53.railway.app
+  port: 8041
+  url: mysql://root:rUrE4uCD1gmu46VBga2G@containers-us-west-53.railway.app:8041/railway
+  database: railway
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -26,9 +29,4 @@ test:
 
 production:
   <<: *default
-  username: root
-  password: rUrE4uCD1gmu46VBga2G
-  host: containers-us-west-53.railway.app
-  port: 8041
-  url: mysql://root:rUrE4uCD1gmu46VBga2G@containers-us-west-53.railway.app:8041/railway
   database: railway
