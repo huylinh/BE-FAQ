@@ -26,7 +26,9 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
-  database: faq
-  username: railwayapp
-  password: <%= ENV["RAILWAYAPP_DATABASE_PASSWORD"] %>
+  username: root
+  password: rUrE4uCD1gmu46VBga2G
+  host: containers-us-west-53.railway.app
+  port: 8041
+  url: mysql://root:rUrE4uCD1gmu46VBga2G@containers-us-west-53.railway.app:8041/railway
+  database: railway
