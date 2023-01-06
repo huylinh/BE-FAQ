@@ -5,7 +5,7 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: mysql2
+  adapter: mysql
   encoding: utf8
   username: root
   password: rUrE4uCD1gmu46VBga2G
@@ -18,14 +18,14 @@ default: &default
 
 development:
   <<: *default
-  database: faq
+  database: railway
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: faq
+  database: railway
 
 production:
   <<: *default
