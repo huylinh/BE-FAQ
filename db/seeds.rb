@@ -9,7 +9,9 @@
 
 Title.create([
     { name: "Bảo hành" }, 
-    { name: "Đặt hàng" }
+    { name: "Đặt hàng" },
+    { name: "Thanh toan" }, 
+    { name: "Ho tro khach hang" }
     ] 
 )
 
