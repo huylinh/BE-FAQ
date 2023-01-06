@@ -1,1 +1,1 @@
-web:rails server -b 0.0.0.0 -p 8041
+web:rails server -b 0.0.0.0 -p ${PORT:-3000}
