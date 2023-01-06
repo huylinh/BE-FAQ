@@ -7,7 +7,7 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  url: mysql://root:rUrE4uCD1gmu46VBga2G@containers-us-west-53.railway.app:8041/railway
+  url: mysql2://root:rUrE4uCD1gmu46VBga2G@containers-us-west-53.railway.app:8041/railway
   database: railway
   username: root
   password: rUrE4uCD1gmu46VBga2G
