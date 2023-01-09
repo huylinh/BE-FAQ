@@ -1,4 +1,4 @@
-class TitlesController < ApplicationController
+class Api::V1::TitlesController < ApplicationController
     before_action :set_title, only: %i[ show edit update destroy ]
 
     def index
@@ -22,10 +22,10 @@ class TitlesController < ApplicationController
     end
 
     def create
-        title = Faq.new (faq_params)
+        title = Title.new (title_params)
         # faq = Faq.create(faq_params)
             # render json: question.title, status: :created
-        if question.save
+        if title.save
         render json: title, status: :created
         else
         render json: title.errors, status: :unprocessable_entity #request xuat hien khi chua xu li
@@ -33,7 +33,7 @@ class TitlesController < ApplicationController
     end
 
       def update
-      if @title.update(faq_params) 
+      if @title.update(title_params) 
         render json: @title, status: :ok
       else
         render json: @faq.errors, status: :unprocessable_entity 
@@ -51,7 +51,7 @@ class TitlesController < ApplicationController
     end
     # Only allow a list of trusted parameters through.
     def title_params
-      params.require(:title).permit(:name)
+      params.require(:title).permit(:name) 
     end
 
     def limit

@@ -1,5 +1,6 @@
 class FaqsRepresenter
-    def initialize(faqs)
+    def initialize(faqs,total)
+      @total = total
       @faqs = faqs
     end
 
@@ -15,7 +16,7 @@ class FaqsRepresenter
         end
         res = {
             faqs: faqs,
-            total: faqs.count
+            total: @total.to_s
         }
     end
 
