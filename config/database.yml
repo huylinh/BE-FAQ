@@ -18,12 +18,9 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  url: mysql2://root:cnmZBggCTHDxS5wUDfCb@containers-us-west-126.railway.app:7982/railway
-  database: railway
-  password: cnmZBggCTHDxS5wUDfCb
-  # username: root
-  # host: 127.0.0.1
-  # port: 3306
+  username: root
+  host: 127.0.0.1
+  port: 3306
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -32,7 +29,7 @@ development:
   database: railway
 
 # Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
+# re-generated from you   r development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
@@ -40,4 +37,5 @@ test:
 
 production:
   <<: *default
+  url: mysq2://root:9sNICCmuVPndDgzXvEfR@containers-us-west-82.railway.app:6014/railway
   database: railway
