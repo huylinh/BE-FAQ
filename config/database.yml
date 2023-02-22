@@ -11,7 +11,7 @@ default: &default
   password: 9sNICCmuVPndDgzXvEfR
   host: containers-us-west-82.railway.app
   port: 6014
-  url: mysql2://${{ MYSQLUSER }}:${{ MYSQLPASSWORD }}@${{ MYSQLHOST }}:${{ MYSQLPORT }}/${{ MYSQLDATABASE }}
+  url: mysql2://root:9sNICCmuVPndDgzXvEfR@containers-us-west-82.railway.app:6014/railway
   database: railway
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
